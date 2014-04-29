@@ -1,0 +1,12 @@
+diff a/DotNetNuke.Modules.Blog.vbproj b/DotNetNuke.Modules.Blog.vbproj	(rejected hunks)
+@@ -23,6 +23,10 @@
+     <TargetFrameworkProfile />
+     <UseIISExpress>false</UseIISExpress>
+     <UpgradeBackupLocation />
++    <IISExpressSSLPort />
++    <IISExpressAnonymousAuthentication />
++    <IISExpressWindowsAuthentication />
++    <IISExpressUseClassicPipelineMode />
+   </PropertyGroup>
+   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+     <DebugSymbols>true</DebugSymbols>
