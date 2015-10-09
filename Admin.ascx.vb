@@ -137,7 +137,10 @@ Public Class Admin
 
   chkAllowAttachments.Checked = Settings.AllowAttachments
   Try
-   ddSummaryModel.Items.FindByValue(CInt(Settings.SummaryModel).ToString).Selected = True
+   If ddSummaryModel.Items.FindByValue(CInt(Settings.SummaryModel).ToString) IsNot Nothing Then
+    ddSummaryModel.ClearSelection()
+    ddSummaryModel.Items.FindByValue(CInt(Settings.SummaryModel).ToString).Selected = True
+   End If
   Catch ex As Exception
   End Try
   cmdEditTagsML.Enabled = BlogContext.IsMultiLingualSite
@@ -165,7 +168,10 @@ Public Class Admin
   ddVocabularyId.DataBind()
   ddVocabularyId.Items.Insert(0, New ListItem(LocalizeString("NoneSpecified"), "-1"))
   Try
-   ddVocabularyId.Items.FindByValue(Settings.VocabularyId.ToString).Selected = True
+   If ddVocabularyId.Items.FindByValue(Settings.VocabularyId.ToString) IsNot Nothing Then
+    ddVocabularyId.ClearSelection()
+    ddVocabularyId.Items.FindByValue(Settings.VocabularyId.ToString).Selected = True
+   End If
   Catch ex As Exception
   End Try
 
